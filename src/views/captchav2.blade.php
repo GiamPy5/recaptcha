@@ -4,7 +4,7 @@
 </script>
 @endif
 <script src='https://www.google.com/recaptcha/api.js?render=onload{{ (isset($lang) ? '&hl='.$lang : '') }}'></script>
-<div class="g-recaptcha" data-sitekey="{{ $public_key }}"></div>
+<div class="g-recaptcha" data-sitekey="{{ $public_key }}" data-theme="{{ $options['theme'] }}"></div>
 <noscript>
   <div style="width: 302px; height: 352px;">
     <div style="width: 302px; height: 352px; position: relative;">
