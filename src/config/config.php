@@ -2,6 +2,8 @@
 
 return array(
 
+	'active' => false,
+
 	/*
 	|--------------------------------------------------------------------------
 	| API Keys
@@ -15,7 +17,7 @@ return array(
 	*/
 	'public_key'	=> '',
 	'private_key'	=> '',
-	
+
 	/*
 	|--------------------------------------------------------------------------
 	| Template
@@ -33,8 +35,8 @@ return array(
 	|
 	| Determine how to call out to get response; values are 'curl' or 'native'.
 	| Only applies to v2.
-	|	
-	*/	
+	|
+	*/
 	'driver'   	=> 'curl',
 
 	/*
@@ -43,13 +45,13 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| Various options for the driver
-	|	
-	*/	
+	|
+	*/
 	'options'   	=> array(
-		
+
 		'curl'  => 10,
 		'theme' => 'light'
-		
+
 	),
 
 	/*
@@ -58,8 +60,8 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| Set which version of ReCaptcha to use.
-	|	
-	*/	
+	|
+	*/
 	'version'   	=> 2,
 
 );
