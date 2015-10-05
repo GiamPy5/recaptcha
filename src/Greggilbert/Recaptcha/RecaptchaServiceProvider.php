@@ -39,13 +39,13 @@ class RecaptchaServiceProvider extends ServiceProvider
 	{
 		$validator = $this->app['Validator'];
 
-		if (app('config')->get('recaptcha::active') === false)
-		{
-			return NULL;
-		}
-
 		$validator::extend('recaptcha', function($attribute, $value, $parameters)
 		{
+			if (app('config')->get('recaptcha::active') === false)
+			{
+				return true;
+			}
+
 			$captcha = app('Greggilbert\Recaptcha\RecaptchaInterface');
             $challenge = app('Input')->get($captcha->getResponseKey());
 
