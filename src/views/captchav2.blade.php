@@ -3,7 +3,7 @@
 	var RecaptchaOptions = {{ json_encode($options) }};
 </script>
 @endif
-<script src='https://www.google.com/recaptcha/api.js?render=onload{{ (isset($lang) ? '&hl='.$lang : '') }}'></script>
+<script src='https://www.google.com/recaptcha/api.js?render=onload{{ (isset($lang) ? '&hl='.$lang : '') }}&{{ $query }}'></script>
 <div class="g-recaptcha" data-sitekey="{{ $public_key }}" data-theme="{{ $options['theme'] }}"></div>
 <noscript>
   <div style="width: 302px; height: 352px;">
